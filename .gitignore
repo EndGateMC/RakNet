@@ -1,0 +1,5 @@
+.xmake
+.vscode
+.vs
+build
+CmakeLists.txt
