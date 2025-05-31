@@ -1,6 +1,6 @@
 add_rules("mode.debug", "mode.release")
 
-if not has_config("vs_runtime") then
+if is_os("windows") and not has_config("vs_runtime") then
     set_runtimes("MD")
 end
 
@@ -8,14 +8,26 @@ target("RakNet")
     set_kind("static")
     set_languages("c++20")
     set_exceptions("none")
-    add_includedirs("include/RakNet")
+    add_includedirs("include/raknet")
     add_files("src/**.cpp")
     add_defines(
-        "NOMINMAX", 
+        "NOMINMAX",
         "UNICODE"
     )
-    add_cxflags(
-        "/EHa",
-        "/utf-8",
-        "/W4"
-    )
+
+    if is_os("windows") then
+        add_cxflags(
+            "/EHa",
+            "/utf-8",
+            "/W4",
+            { force = true }
+        )
+    elseif is_os("linux") then
+        add_cxflags(
+            "-Wall",
+            "-Wextra",
+            "-Wconversion",
+            "-fexceptions",
+            { force = true }
+        )
+    end
