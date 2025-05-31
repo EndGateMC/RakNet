@@ -28,6 +28,11 @@ target("RakNet")
             "-Wextra",
             "-Wconversion",
             "-fexceptions",
+            "-stdlib=libc++",
             { force = true }
+        )
+        add_ldflags(
+            "-stdlib=libc++",
+            {force = true}
         )
     end
