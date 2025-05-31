@@ -30,23 +30,8 @@ target("RakNet")
         add_cxxflags("-include cstddef")
         add_cxflags(
             "-Wall",
-            "-Wextra",
-            "-Wconversion",
             "-fexceptions",
             "-stdlib=libc++",
-            "-Wno-deprecated-copy",
-            "-Wno-sign-conversion",
-            "-Wno-shorten-64-to-32",
-            "-Wno-sign-compare",
-            "-Wno-unused-but-set-variable",
-            "-Wno-unused-parameter",
-            "-Wno-implicit-int-float-conversion",
-            "-Wno-pointer-bool-conversion",
-            "-Wno-implicit-int-conversion",
-            "-Wno-implicit-int-float-conversion",
-            "-Wno-pointer-bool-conversion",
-            "-Wno-unused-private-field",
-            "-Wno-unknown-pragmas",
             { force = true }
         )
         add_ldflags(
