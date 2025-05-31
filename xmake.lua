@@ -35,7 +35,6 @@ target("RakNet")
             "-Wno-pointer-bool-conversion",
             "-Wno-unused-but-set-variable",
             "-Wno-unused-private-field",
-            "-Wno-unknown-pragmas",
             { force = true }
         )
         add_ldflags(

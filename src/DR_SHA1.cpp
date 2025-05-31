@@ -62,9 +62,11 @@
         w  = ROL32(w, 30);                                                                                             \
     }
 
+#ifdef _MSC_VER
 #pragma warning(push)
 // Disable compiler warning 'Conditional expression is constant'
 #pragma warning(disable : 4127)
+#endif
 
 CSHA1::CSHA1() {
     m_block = (SHA1_WORKSPACE_BLOCK*)m_workspace;
@@ -366,4 +368,6 @@ void CSHA1::HMAC(
     // 	secondHash.ReportHash( report, 0 );
 }
 
+#ifdef _MSC_VER
 #pragma warning(pop)
+#endif

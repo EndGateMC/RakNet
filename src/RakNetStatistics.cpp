@@ -21,7 +21,7 @@ using namespace RakNet;
 
 // Verbosity level currently supports 0 (low), 1 (medium), 2 (high)
 // Buffer must be hold enough to hold the output string.  See the source to get an idea of how many bytes will be output
-void RAK_DLL_EXPORT RakNet::StatisticsToString(RakNetStatistics* s, char* buffer, int verbosityLevel) {
+void RakNet::StatisticsToString(RakNetStatistics* s, char* buffer, int verbosityLevel) {
     if (s == 0) {
         sprintf(buffer, "stats is a NULL pointer in statsToString\n");
         return;
