@@ -22,6 +22,10 @@ target("RakNet")
             "/W4",
             { force = true }
         )
+        add_defines(
+            "_CRT_SECURE_NO_WARNINGS",
+            "_WINSOCK_DEPRECATED_NO_WARNINGS"
+        )
     elseif is_os("linux") then
         add_cxxflags("-include cstddef")
         add_cxflags(

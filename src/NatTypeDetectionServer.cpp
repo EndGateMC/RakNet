@@ -8,9 +8,6 @@
  *
  */
 
-#ifdef _WIN32
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 
 #include "NativeFeatureIncludes.h"
 #if _RAKNET_SUPPORT_NatTypeDetectionServer == 1

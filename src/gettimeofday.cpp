@@ -8,9 +8,6 @@
  *
  */
 
-#ifdef _WIN32
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 
 #if defined(_WIN32) && !defined(__GNUC__) && !defined(__GCCXML__)
 

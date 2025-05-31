@@ -11,9 +11,6 @@
 /// \file
 ///
 
-#ifdef _WIN32
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 
 #if defined(_MSC_VER) && _MSC_VER < 1299 // VC6 doesn't support template specialization
 #include "BitStream_NoTemplate.cpp"

@@ -8,11 +8,6 @@
  *
  */
 
-#ifdef _WIN32
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
-#define _CRT_SECURE_NO_WARNINGS
-#endif
-
 #include "RakNetSocket2.h"
 #include "GetTime.h"
 #include "RakAssert.h"

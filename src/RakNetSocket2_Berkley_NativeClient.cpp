@@ -8,12 +8,12 @@
  *
  */
 
-#ifdef _WIN32
-#define _CRT_SECURE_NO_WARNINGS
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
-#endif
 
 #include "EmptyHeader.h"
+
+#ifndef _WIN32
+#include <netdb.h>
+#endif
 
 #ifdef RAKNET_SOCKET_2_INLINE_FUNCTIONS
 
