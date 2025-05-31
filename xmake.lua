@@ -35,6 +35,8 @@ target("RakNet")
             "-fexceptions",
             "-stdlib=libc++",
             "-Wno-deprecated-copy",
+            "-Wno-sign-conversion",
+            "-Wno-shorten-64-to-32",
             { force = true }
         )
         add_ldflags(
