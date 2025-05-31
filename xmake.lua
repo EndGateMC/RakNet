@@ -23,6 +23,7 @@ target("RakNet")
             { force = true }
         )
     elseif is_os("linux") then
+        add_cxxflags("-include cstddef")
         add_cxflags(
             "-Wall",
             "-Wextra",
