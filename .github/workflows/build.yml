@@ -1,0 +1,52 @@
+on:
+  push:
+    paths:
+      - .github/workflows/build.yml
+      - src/**
+      - include/**
+      - xmake.lua
+
+jobs:
+  build-windows:
+    name: Build on Windows (MSVC)
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup MSVC
+      uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: x64
+        
+    - name: Install xmake
+      uses: xmake-io/github-action-setup-xmake@v1
+      with:
+        version: latest
+        
+    - name: Build RakNet (Debug)
+      run: xmake config --mode=debug && xmake build RakNet
+      
+    - name: Build RakNet (Release)
+      run: xmake config --mode=release && xmake build RakNet
+
+  build-linux:
+    name: Build on Linux (Clang)
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Install Clang
+      run: sudo apt-get update && sudo apt-get install -y clang
+      
+    - name: Install xmake
+      uses: xmake-io/github-action-setup-xmake@v1
+      with:
+        version: latest
+        
+    - name: Build RakNet (Debug)
+      run: xmake config --mode=debug --toolchain=clang && xmake build RakNet
+      
+    - name: Build RakNet (Release)
+      run: xmake config --mode=release --toolchain=clang && xmake build RakNet
