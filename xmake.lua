@@ -34,6 +34,7 @@ target("RakNet")
             "-Wconversion",
             "-fexceptions",
             "-stdlib=libc++",
+            "-Wno-deprecated-copy",
             { force = true }
         )
         add_ldflags(

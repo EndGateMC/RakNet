@@ -21,8 +21,6 @@ jobs:
         
     - name: Install xmake
       uses: xmake-io/github-action-setup-xmake@v1
-      with:
-        version: latest
         
     - name: Build RakNet (Debug)
       run: xmake config --mode=debug && xmake build RakNet
@@ -47,8 +45,6 @@ jobs:
       
     - name: Install xmake
       uses: xmake-io/github-action-setup-xmake@v1
-      with:
-        version: latest
         
     - name: Build RakNet (Debug)
       run: xmake config --mode=debug --toolchain=clang && xmake build RakNet
