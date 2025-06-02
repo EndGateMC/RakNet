@@ -30,8 +30,8 @@ target("RakNet")
             "/W4",
             { force = true }
         )
-        if has_config("libtype", "shared") then
-            add_defines("RAKNET_EXPORT")
+        if is_config("libtype", "shared") then
+            add_defines("_RAKNET_EXPORT")
             add_links("ws2_32")
         end
     else
@@ -49,12 +49,20 @@ target("RakNet")
             "-stdlib=libc++",
             { force = true }
         )
-        if has_config("libtype", "shared") then
-            add_defines("RAKNET_EXPORT")
+        if is_config("libtype", "shared") then
+            add_defines("_RAKNET_EXPORT")
             add_cxflags(
                 "-fvisibility=hidden",
                 "-fvisibility-inlines-hidden",
                 { force = true }
             )
         end
+    end
+
+    if is_config("libtype", "shared") then
+        after_build(function (target)
+            local output_dir = path.join(os.projectdir(), "bin")
+            os.mkdir(output_dir)
+            os.cp(target:targetfile(), path.join(output_dir, path.filename(target:targetfile())))
+        end)
     end

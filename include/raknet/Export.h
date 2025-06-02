@@ -11,10 +11,14 @@
 #include "RakNetDefines.h"
 
 #ifdef _WIN32
-#ifdef RAKNET_EXPORT
+#ifdef _RAKNET_EXPORT
 #define RAKNET_API __declspec(dllexport)
 #else
+#ifdef _RANKET_DLL
 #define RAKNET_API __declspec(dllimport)
+#else
+#define RAKNET_API
+#endif
 #endif
 #else
 #ifdef RAKNET_EXPORT
