@@ -27,7 +27,7 @@ class LogCommandParser;
 
 /// \ingroup PACKETLOGGER_GROUP
 /// \brief Packetlogger that logs to a remote command console
-class RAK_DLL_EXPORT PacketConsoleLogger : public PacketLogger {
+class RAKNET_API PacketConsoleLogger : public PacketLogger {
 public:
     PacketConsoleLogger();
     // Writes to the command parser used for logging, which is accessed through a secondary communication layer (such as

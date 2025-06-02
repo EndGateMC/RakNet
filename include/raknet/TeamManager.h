@@ -132,7 +132,7 @@ struct TeamSelection {
 /// and TM_TeamMember::DeserializeConstruction() in Replica3::PostDeserializeConstruction() There is otherwise no need
 /// to manually serialize the class, as operations are networked internally.
 /// \ingroup TEAM_MANAGER_GROUP
-class RAK_DLL_EXPORT TM_TeamMember {
+class RAKNET_API TM_TeamMember {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(TM_TeamMember)
@@ -325,7 +325,7 @@ protected:
 /// TM_Team::DeserializeConstruction() in Replica3::PostDeserializeConstruction() There is otherwise no need to manually
 /// serialize the class, as operations are networked internally.
 /// \ingroup TEAM_MANAGER_GROUP
-class RAK_DLL_EXPORT TM_Team {
+class RAKNET_API TM_Team {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(TM_Team)
@@ -680,7 +680,7 @@ protected:
 /// client/server, you must set the host<BR>
 /// \note This replaces TeamBalancer. You cannot use TeamBalancer and TeamManager at the same time.
 /// \ingroup TEAM_MANAGER_GROUP
-class RAK_DLL_EXPORT TeamManager : public PluginInterface2 {
+class RAKNET_API TeamManager : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(TeamManager)

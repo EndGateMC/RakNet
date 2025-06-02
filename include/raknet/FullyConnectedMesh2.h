@@ -39,7 +39,7 @@ class RakPeerInterface;
 /// to act as a host
 /// \pre You must also install the ConnectionGraph2 plugin in order to use SetConnectOnNewRemoteConnection()
 /// \ingroup FULLY_CONNECTED_MESH_GROUP
-class RAK_DLL_EXPORT FullyConnectedMesh2 : public PluginInterface2 {
+class RAKNET_API FullyConnectedMesh2 : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(FullyConnectedMesh2)

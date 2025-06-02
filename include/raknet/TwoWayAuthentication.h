@@ -61,7 +61,7 @@ class RakPeerInterface;
 /// MessageFilter first in the list of plugins
 /// \note If other systems challenges us, and fails, you will get ID_TWO_WAY_AUTHENTICATION_INCOMING_CHALLENGE_FAILED.
 /// \ingroup PLUGINS_GROUP
-class RAK_DLL_EXPORT TwoWayAuthentication : public PluginInterface2 {
+class RAKNET_API TwoWayAuthentication : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(TwoWayAuthentication)
@@ -126,7 +126,7 @@ public:
         RakNet::Time          whenGenerated;
     };
     /// \internal
-    struct RAK_DLL_EXPORT NonceGenerator {
+    struct RAKNET_API NonceGenerator {
         NonceGenerator();
         ~NonceGenerator();
         void GetNonce(

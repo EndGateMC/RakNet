@@ -24,7 +24,7 @@ struct CloudQueryRow;
 
 /// Allocates CloudQueryRow and the row data. Override to use derived classes or different allocators
 /// \ingroup CLOUD_GROUP
-class RAK_DLL_EXPORT CloudAllocator {
+class RAKNET_API CloudAllocator {
 public:
     CloudAllocator() {}
     virtual ~CloudAllocator() {}
@@ -41,7 +41,7 @@ public:
 
 /// Serves as a key to identify data uploaded to or queried from the server.
 /// \ingroup CLOUD_GROUP
-struct RAK_DLL_EXPORT CloudKey {
+struct RAKNET_API CloudKey {
     CloudKey() {}
     CloudKey(RakNet::RakString _primaryKey, uint32_t _secondaryKey)
     : primaryKey(_primaryKey),
@@ -65,7 +65,7 @@ int CloudKeyComp(const CloudKey& key, const CloudKey& data);
 
 /// Data members used to query the cloud
 /// \ingroup CLOUD_GROUP
-struct RAK_DLL_EXPORT CloudQuery {
+struct RAKNET_API CloudQuery {
     CloudQuery() {
         startingRowIndex   = 0;
         maxRowsToReturn    = 0;
@@ -94,7 +94,7 @@ struct RAK_DLL_EXPORT CloudQuery {
 };
 
 /// \ingroup CLOUD_GROUP
-struct RAK_DLL_EXPORT CloudQueryRow {
+struct RAKNET_API CloudQueryRow {
     /// Key used to identify this data
     CloudKey key;
 
@@ -121,7 +121,7 @@ struct RAK_DLL_EXPORT CloudQueryRow {
 };
 
 /// \ingroup CLOUD_GROUP
-struct RAK_DLL_EXPORT CloudQueryResult {
+struct RAKNET_API CloudQueryResult {
     /// Query originally passed to Download()
     CloudQuery cloudQuery;
 

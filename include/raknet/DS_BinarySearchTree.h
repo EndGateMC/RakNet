@@ -93,7 +93,7 @@ namespace DataStructures {
  *
  */
 template <class BinarySearchTreeType>
-class RAK_DLL_EXPORT BinarySearchTree {
+class RAKNET_API BinarySearchTree {
 
 public:
     struct node {
@@ -132,7 +132,7 @@ protected:
 
 /// An AVLBalancedBinarySearchTree is a binary tree that is always balanced
 template <class BinarySearchTreeType>
-class RAK_DLL_EXPORT AVLBalancedBinarySearchTree : public BinarySearchTree<BinarySearchTreeType> {
+class RAKNET_API AVLBalancedBinarySearchTree : public BinarySearchTree<BinarySearchTreeType> {
 
 public:
     AVLBalancedBinarySearchTree() {}

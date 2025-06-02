@@ -40,7 +40,7 @@ class RakNetTransport;
 /// \details RakNetTransport automatically initializes security for the system.  Use the project CommandConsoleClient to
 /// connect To the ConsoleServer if you use RakNetTransport
 /// \ingroup RAKNET_TRANSPORT_GROUP
-class RAK_DLL_EXPORT RakNetTransport2 : public TransportInterface, public PluginInterface2 {
+class RAKNET_API RakNetTransport2 : public TransportInterface, public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(RakNetTransport2)

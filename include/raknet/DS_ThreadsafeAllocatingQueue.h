@@ -28,7 +28,7 @@
 namespace DataStructures {
 
 template <class structureType>
-class RAK_DLL_EXPORT ThreadsafeAllocatingQueue {
+class RAKNET_API ThreadsafeAllocatingQueue {
 public:
     // Queue operations
     void           Push(structureType* s);

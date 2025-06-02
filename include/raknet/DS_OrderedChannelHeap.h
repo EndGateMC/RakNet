@@ -33,7 +33,7 @@ template <
     class heap_data_type,
     int (*channel_key_comparison_func)(const channel_key_type&, const channel_key_type&) =
         defaultMapKeyComparison<channel_key_type>>
-class RAK_DLL_EXPORT OrderedChannelHeap {
+class RAKNET_API OrderedChannelHeap {
 public:
     static void IMPLEMENT_DEFAULT_COMPARISON(void) {
         DataStructures::defaultMapKeyComparison<channel_key_type>(channel_key_type(), channel_key_type());

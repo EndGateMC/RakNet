@@ -22,7 +22,7 @@
 
 namespace RakNet {
 
-class RAK_DLL_EXPORT ReferenceCounter {
+class RAKNET_API ReferenceCounter {
 private:
     int refCount;
 
@@ -35,7 +35,7 @@ public:
 };
 
 template <typename T>
-class RAK_DLL_EXPORT RakNetSmartPtr {
+class RAKNET_API RakNetSmartPtr {
 private:
     T*                ptr;       // pointer
     ReferenceCounter* reference; // Reference refCount

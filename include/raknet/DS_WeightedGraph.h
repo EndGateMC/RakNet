@@ -38,7 +38,7 @@
 /// As these data structures are stand-alone, you can use them outside of RakNet for your own projects if you wish.
 namespace DataStructures {
 template <class node_type, class weight_type, bool allow_unlinkedNodes>
-class RAK_DLL_EXPORT WeightedGraph {
+class RAKNET_API WeightedGraph {
 public:
     static void IMPLEMENT_DEFAULT_COMPARISON(void) {
         DataStructures::defaultMapKeyComparison<node_type>(node_type(), node_type());

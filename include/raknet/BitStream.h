@@ -45,7 +45,7 @@ namespace RakNet {
 /// This class allows you to write and read native types as a string of bits.  BitStream is used extensively throughout
 /// RakNet and is designed to be used by users as well.
 /// \sa BitStreamSample.txt
-class RAK_DLL_EXPORT BitStream {
+class RAKNET_API BitStream {
 
 public:
     // GetInstance() and DestroyInstance(instance*)

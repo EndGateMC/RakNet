@@ -39,7 +39,7 @@ class RakPeerInterface;
 /// All attached instances of CloudServerQueryFilter on each corresponding operation, from all directly connected
 /// clients If any attached instance returns false for a given operation, that operation is silently rejected
 /// \ingroup CLOUD_GROUP
-class RAK_DLL_EXPORT CloudServerQueryFilter {
+class RAKNET_API CloudServerQueryFilter {
 public:
     CloudServerQueryFilter() {}
     virtual ~CloudServerQueryFilter() {}
@@ -82,7 +82,7 @@ public:
 
 /// \brief Stores client data, and allows cross-server communication to retrieve this data
 /// \ingroup CLOUD_GROUP
-class RAK_DLL_EXPORT CloudServer : public PluginInterface2, CloudAllocator {
+class RAKNET_API CloudServer : public PluginInterface2, CloudAllocator {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(CloudServer)

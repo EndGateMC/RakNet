@@ -231,7 +231,7 @@ typedef union {
     UINT_32 l[16];
 } SHA1_WORKSPACE_BLOCK;
 
-class RAK_DLL_EXPORT CSHA1 {
+class RAKNET_API CSHA1 {
 public:
 #ifdef SHA1_UTILITY_FUNCTIONS
     // Different formats for ReportHash(Stl)

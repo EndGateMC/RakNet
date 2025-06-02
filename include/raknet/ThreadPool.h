@@ -36,7 +36,7 @@ public:
 /// middle of the queue, you might wish to store pointers rather than the structures themselves so the array can shift
 /// efficiently.
 template <class InputType, class OutputType>
-struct RAK_DLL_EXPORT ThreadPool {
+struct RAKNET_API ThreadPool {
     ThreadPool();
     ~ThreadPool();
 

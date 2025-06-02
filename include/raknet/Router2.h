@@ -53,7 +53,7 @@ struct Router2DebugInterface {
 /// \ingroup ROUTER_2_GROUP
 /// \brief Class interface for the Router2 system
 /// \details
-class RAK_DLL_EXPORT Router2 : public PluginInterface2 {
+class RAKNET_API Router2 : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(Router2)

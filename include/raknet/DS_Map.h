@@ -44,7 +44,7 @@ template <
     class key_type,
     class data_type,
     int (*key_comparison_func)(const key_type&, const key_type&) = defaultMapKeyComparison<key_type>>
-class RAK_DLL_EXPORT Map {
+class RAKNET_API Map {
 public:
     static void IMPLEMENT_DEFAULT_COMPARISON(void) {
         DataStructures::defaultMapKeyComparison<key_type>(key_type(), key_type());

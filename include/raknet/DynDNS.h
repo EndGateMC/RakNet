@@ -58,7 +58,7 @@ enum DynDnsResultCode {
 };
 
 // Can only process one at a time with the current implementation
-class RAK_DLL_EXPORT DynDNS {
+class RAKNET_API DynDNS {
 public:
     DynDNS();
     ~DynDNS();

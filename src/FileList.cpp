@@ -68,7 +68,7 @@ using namespace RakNet;
 
 #include "RakAlloca.h"
 
-// int RAK_DLL_EXPORT FileListNodeComp( char * const &key, const FileListNode &data )
+// int RAKNET_API FileListNodeComp( char * const &key, const FileListNode &data )
 //{
 //	return strcmp(key, data.filename);
 // }

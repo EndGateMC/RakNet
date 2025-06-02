@@ -26,7 +26,7 @@ namespace RakNet {
 
 /// This generates special cases of the huffman encoding tree using 8 bit keys with the additional condition that unused
 /// combinations of 8 bits are treated as a frequency of 1
-class RAK_DLL_EXPORT HuffmanEncodingTree {
+class RAKNET_API HuffmanEncodingTree {
 
 public:
     HuffmanEncodingTree();

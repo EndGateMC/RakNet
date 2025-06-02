@@ -41,20 +41,20 @@ class PacketLogger;
 /// \ingroup PLUGINS_GROUP
 
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-struct RAK_DLL_EXPORT NatPunchthroughServerDebugInterface {
+struct RAKNET_API NatPunchthroughServerDebugInterface {
     NatPunchthroughServerDebugInterface() {}
     virtual ~NatPunchthroughServerDebugInterface() {}
     virtual void OnServerMessage(const char* msg) = 0;
 };
 
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-struct RAK_DLL_EXPORT NatPunchthroughServerDebugInterface_Printf : public NatPunchthroughServerDebugInterface {
+struct RAKNET_API NatPunchthroughServerDebugInterface_Printf : public NatPunchthroughServerDebugInterface {
     virtual void OnServerMessage(const char* msg);
 };
 
 #if _RAKNET_SUPPORT_PacketLogger == 1
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-struct RAK_DLL_EXPORT NatPunchthroughServerDebugInterface_PacketLogger : public NatPunchthroughServerDebugInterface {
+struct RAKNET_API NatPunchthroughServerDebugInterface_PacketLogger : public NatPunchthroughServerDebugInterface {
     // Set to non-zero to write to the packetlogger!
     PacketLogger* pl;
 
@@ -72,7 +72,7 @@ struct RAK_DLL_EXPORT NatPunchthroughServerDebugInterface_PacketLogger : public 
 /// \sa NatTypeDetectionClient
 /// See also http://www.jenkinssoftware.com/raknet/manual/natpunchthrough.html
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-class RAK_DLL_EXPORT NatPunchthroughServer : public PluginInterface2 {
+class RAKNET_API NatPunchthroughServer : public PluginInterface2 {
 public:
     STATIC_FACTORY_DECLARATIONS(NatPunchthroughServer)
 

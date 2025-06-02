@@ -26,7 +26,7 @@
 
 namespace DataStructures {
 // Allocate some number of bytes from pools.  Uses the heap if necessary.
-class RAK_DLL_EXPORT BytePool {
+class RAKNET_API BytePool {
 public:
     BytePool();
     ~BytePool();

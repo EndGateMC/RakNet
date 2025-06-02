@@ -53,7 +53,7 @@ struct FileListReceiver;
 /// want to get.<BR> The other system should then prepare a FileList and call FileListTransfer::Send(), passing the
 /// return value of FileListTransfer::SetupReceive()<BR> as the \a setID parameter to FileListTransfer::Send()
 /// \ingroup FILE_LIST_TRANSFER_GROUP
-class RAK_DLL_EXPORT FileListTransfer : public PluginInterface2 {
+class RAKNET_API FileListTransfer : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(FileListTransfer)

@@ -47,7 +47,7 @@ struct RemoteClient;
 
 /// \internal
 /// \brief As the name says, a simple multithreaded TCP server.  Used by TelnetTransport
-class RAK_DLL_EXPORT TCPInterface {
+class RAKNET_API TCPInterface {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(TCPInterface)

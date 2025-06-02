@@ -13,6 +13,6 @@
 
 #include "Export.h"
 
-void RAK_DLL_EXPORT RakSleep(unsigned int ms);
+void RAKNET_API RakSleep(unsigned int ms);
 
 #endif

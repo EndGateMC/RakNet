@@ -37,7 +37,7 @@ namespace DataStructures {
 /// structures.<BR> This is a relatively simple and fast implementation of the types of tables commonly used in
 /// databases.<BR> See TableSerializer to serialize data members of the table.<BR> See LightweightDatabaseClient and
 /// LightweightDatabaseServer to transmit the table over the network.
-class RAK_DLL_EXPORT Table {
+class RAKNET_API Table {
 public:
     enum ColumnType {
         // Cell::i used
@@ -56,7 +56,7 @@ public:
 
     /// Holds the actual data in the table
     // Note: If this structure is changed the struct in the swig files need to be changed as well
-    struct RAK_DLL_EXPORT Cell {
+    struct RAKNET_API Cell {
         Cell();
         ~Cell();
         Cell(double numericValue, char* charValue, void* ptr, ColumnType type);
@@ -104,7 +104,7 @@ public:
     /// Stores the name and type of the column
     /// \internal
     // Note: If this structure is changed the struct in the swig files need to be changed as well
-    struct RAK_DLL_EXPORT ColumnDescriptor {
+    struct RAKNET_API ColumnDescriptor {
         ColumnDescriptor();
         ~ColumnDescriptor();
         ColumnDescriptor(const char cn[_TABLE_MAX_COLUMN_NAME_LENGTH], ColumnType ct);
@@ -115,7 +115,7 @@ public:
 
     /// Stores the list of cells for this row, and a special flag used for internal sorting
     // Note: If this structure is changed the struct in the swig files need to be changed as well
-    struct RAK_DLL_EXPORT Row {
+    struct RAKNET_API Row {
         // list of cells
         DataStructures::List<Cell*> cells;
 
@@ -143,7 +143,7 @@ public:
 
     // Compare the cell value for a row at columnName to the cellValue using operation.
     // Note: If this structure is changed the struct in the swig files need to be changed as well
-    struct RAK_DLL_EXPORT FilterQuery {
+    struct RAKNET_API FilterQuery {
         FilterQuery();
         ~FilterQuery();
         FilterQuery(unsigned column, Cell* cell, FilterQueryType op);
@@ -163,7 +163,7 @@ public:
 
     // Sort on increasing or decreasing order for a particular column
     // Note: If this structure is changed the struct in the swig files need to be changed as well
-    struct RAK_DLL_EXPORT SortQuery {
+    struct RAKNET_API SortQuery {
         /// The index of the table column we are sorting on
         unsigned columnIndex;
 

@@ -30,7 +30,7 @@ class FileList;
 class TCPInterface;
 
 /// \brief Rudimentary class to send email from code.
-class RAK_DLL_EXPORT EmailSender {
+class RAKNET_API EmailSender {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(EmailSender)

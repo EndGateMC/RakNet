@@ -41,7 +41,7 @@ namespace DataStructures {
 /// Used in the BPlusTree.  Used for both leaf and index nodes.
 /// Don't use a constructor or destructor, due to the memory pool I am using
 template <class KeyType, class DataType, int order>
-struct RAK_DLL_EXPORT Page {
+struct RAKNET_API Page {
     // We use the same data structure for both leaf and index nodes.
     // It uses a little more memory for index nodes but reduces
     // memory fragmentation, allocations, and deallocations.
@@ -67,7 +67,7 @@ struct RAK_DLL_EXPORT Page {
 /// A BPlus tree
 /// Written with efficiency and speed in mind.
 template <class KeyType, class DataType, int order>
-class RAK_DLL_EXPORT BPlusTree {
+class RAKNET_API BPlusTree {
 public:
     struct ReturnAction {
         KeyType key1;

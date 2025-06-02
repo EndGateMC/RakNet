@@ -31,7 +31,7 @@ namespace RakNet {
 class RakPeer;
 
 /*
-class RAK_DLL_EXPORT SocketLayerOverride
+class RAKNET_API SocketLayerOverride
 {
 public:
     SocketLayerOverride() {}
@@ -48,7 +48,7 @@ public:
 */
 
 // A platform independent implementation of Berkeley sockets, with settings used by RakNet
-class RAK_DLL_EXPORT SocketLayer {
+class RAKNET_API SocketLayer {
 
 public:
     /// Default Constructor

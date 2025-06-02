@@ -25,7 +25,7 @@ namespace RakNet {
 
 /// \ingroup PACKETLOGGER_GROUP
 /// \brief Packetlogger that outputs to the output window in the debugger. Windows only.
-class RAK_DLL_EXPORT PacketOutputWindowLogger : public PacketLogger {
+class RAKNET_API PacketOutputWindowLogger : public PacketLogger {
 public:
     PacketOutputWindowLogger();
     virtual ~PacketOutputWindowLogger();

@@ -26,7 +26,7 @@ namespace RakNet {
 
 /// \ingroup PACKETLOGGER_GROUP
 /// \brief Same as PacketLogger, but writes output in the user thread.
-class RAK_DLL_EXPORT ThreadsafePacketLogger : public PacketLogger {
+class RAKNET_API ThreadsafePacketLogger : public PacketLogger {
 public:
     ThreadsafePacketLogger();
     virtual ~ThreadsafePacketLogger();

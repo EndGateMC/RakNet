@@ -49,7 +49,7 @@ typedef unsigned char TeamId;
 /// balancing.<BR> Usage: TODO
 /// \deprecated Use TeamManager intead
 /// \ingroup TEAM_BALANCER_GROUP
-class RAK_DLL_EXPORT TeamBalancer : public PluginInterface2 {
+class RAKNET_API TeamBalancer : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(TeamBalancer)

@@ -103,7 +103,7 @@ SocketDescriptor::SocketDescriptor(unsigned short _port, const char* _hostAddres
 // class This is what you want for client/server, where the server assigns all NetworkIDs and it is unnecessary to
 // transmit the full structure. For peer to peer, this will transmit the systemAddress of the system that created the
 // object in addition to localSystemAddress.  This allows Any system to create unique ids locally. All systems must use
-// the same value for this variable. bool RAK_DLL_EXPORT NetworkID::peerToPeerMode=false;
+// the same value for this variable. bool RAKNET_API NetworkID::peerToPeerMode=false;
 
 SystemAddress& SystemAddress::operator=(const SystemAddress& input) {
     memcpy(&address, &input.address, sizeof(address));

@@ -65,7 +65,7 @@ struct FileListNode {
 
 /// Callback interface set with FileList::SetCallback() in case you want progress notifications when
 /// FileList::AddFilesFromDirectory() is called
-class RAK_DLL_EXPORT FileListProgress {
+class RAKNET_API FileListProgress {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(FileListProgress)
@@ -130,7 +130,7 @@ public:
 };
 
 /// Implementation of FileListProgress to use RAKNET_DEBUG_PRINTF
-class RAK_DLL_EXPORT FLP_Printf : public FileListProgress {
+class RAKNET_API FLP_Printf : public FileListProgress {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(FLP_Printf)
@@ -151,7 +151,7 @@ public:
     virtual void OnSendAborted(SystemAddress systemAddress);
 };
 
-class RAK_DLL_EXPORT FileList {
+class RAKNET_API FileList {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(FileList)

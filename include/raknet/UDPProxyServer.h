@@ -64,7 +64,7 @@ struct UDPProxyServerResultHandler {
 /// via the UDPProxyServer plugin.<BR> The UDPProxyServer connects to UDPProxyServer to get a list of servers running
 /// UDPProxyServer, and the coordinator will relay our forwarding request.
 /// \ingroup UDP_PROXY_GROUP
-class RAK_DLL_EXPORT UDPProxyServer : public PluginInterface2 {
+class RAKNET_API UDPProxyServer : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(UDPProxyServer)

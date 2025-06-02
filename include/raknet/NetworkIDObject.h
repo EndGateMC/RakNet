@@ -35,7 +35,7 @@ typedef uint32_t NetworkIDType;
 /// other systems should then create the same class of object, and call SetNetworkID() on that class with the NetworkID
 /// in the packet.
 /// \see the manual for more information on this.
-class RAK_DLL_EXPORT NetworkIDObject {
+class RAKNET_API NetworkIDObject {
 public:
     // Constructor.  NetworkIDs, if IsNetworkIDAuthority() is true, are created here.
     NetworkIDObject();

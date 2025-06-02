@@ -61,7 +61,7 @@ enum RelayPluginEnums {
 
 /// \brief A simple class to relay messages from one system to another, identifying remote systems by a string.
 /// \ingroup RELAY_PLUGIN_GROUP
-class RAK_DLL_EXPORT RelayPlugin : public PluginInterface2 {
+class RAKNET_API RelayPlugin : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(RelayPlugin)

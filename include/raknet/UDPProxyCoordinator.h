@@ -36,7 +36,7 @@ namespace RakNet {
 /// \brief Middleman between UDPProxyServer and UDPProxyClient, maintaining a list of UDPProxyServer, and managing state
 /// for clients to find an available forwarding server.
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-class RAK_DLL_EXPORT UDPProxyCoordinator : public PluginInterface2 {
+class RAKNET_API UDPProxyCoordinator : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(UDPProxyCoordinator)

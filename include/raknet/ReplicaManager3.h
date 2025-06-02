@@ -79,7 +79,7 @@ struct PRO {
 /// At this point, all new connections will automatically download, get construction messages, get destruction messages,
 /// and update serialization automatically.
 /// \ingroup REPLICA_MANAGER_GROUP3
-class RAK_DLL_EXPORT ReplicaManager3 : public PluginInterface2 {
+class RAKNET_API ReplicaManager3 : public PluginInterface2 {
 public:
     ReplicaManager3();
     virtual ~ReplicaManager3();
@@ -501,7 +501,7 @@ enum SendSerializeIfChangedResult {
 /// \details Important function: AllocReplica() - must be overridden to create an object given an identifier for that
 /// object, which you define for all objects in your game
 /// \ingroup REPLICA_MANAGER_GROUP3
-class RAK_DLL_EXPORT Connection_RM3 {
+class RAKNET_API Connection_RM3 {
 public:
     Connection_RM3(const SystemAddress& _systemAddress, RakNetGUID _guid);
     virtual ~Connection_RM3();
@@ -962,7 +962,7 @@ enum Replica3P2PMode {
 /// \brief Base class for your replicated objects for the ReplicaManager3 system.
 /// \details To use, derive your class, or a member of your class, from Replica3.<BR>
 /// \ingroup REPLICA_MANAGER_GROUP3
-class RAK_DLL_EXPORT Replica3 : public NetworkIDObject {
+class RAKNET_API Replica3 : public NetworkIDObject {
 public:
     Replica3();
 
@@ -1330,7 +1330,7 @@ public:
 /// Parent class must still define and functions though!
 /// \pre Parent class must call SetCompositeOwner() on this object
 template <class parent_type>
-class RAK_DLL_EXPORT Replica3Composite : public Replica3 {
+class RAKNET_API Replica3Composite : public Replica3 {
 protected:
     parent_type* r3CompositeOwner;
 

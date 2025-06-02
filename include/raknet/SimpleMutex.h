@@ -38,7 +38,7 @@ namespace RakNet {
 /// profiling, I saw that this function was incredibly slow compared to the blazing performance of everything else, so
 /// switched to single producer / consumer everywhere.  Now the user thread of RakNet is not threadsafe, but it's 100X
 /// faster than before.
-class RAK_DLL_EXPORT SimpleMutex {
+class RAKNET_API SimpleMutex {
 public:
     // Constructor
     SimpleMutex();

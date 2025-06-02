@@ -25,7 +25,7 @@ namespace RakNet {
 
 class BitStream;
 
-class RAK_DLL_EXPORT RakNetRandomSync {
+class RAKNET_API RakNetRandomSync {
 public:
     RakNetRandomSync();
     virtual ~RakNetRandomSync();

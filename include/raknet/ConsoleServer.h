@@ -36,7 +36,7 @@ class CommandParserInterface;
 /// support the protocol used by your derivation of TransportInterface . TelnetTransport and RakNetTransport are two
 /// such derivations . When a command is sent by a remote console, it will be processed by your implementations of
 /// CommandParserInterface
-class RAK_DLL_EXPORT ConsoleServer {
+class RAKNET_API ConsoleServer {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(ConsoleServer)

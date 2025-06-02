@@ -87,7 +87,7 @@ public:
     static void           DeallocRNS2(RakNetSocket2* s);
 };
 
-class RAK_DLL_EXPORT RNS2EventHandler {
+class RAKNET_API RNS2EventHandler {
 public:
     RNS2EventHandler() {}
     virtual ~RNS2EventHandler() {}
@@ -326,7 +326,7 @@ protected:
 
 #if defined(_WIN32)
 
-class RAK_DLL_EXPORT SocketLayerOverride {
+class RAKNET_API SocketLayerOverride {
 public:
     SocketLayerOverride() {}
     virtual ~SocketLayerOverride() {}

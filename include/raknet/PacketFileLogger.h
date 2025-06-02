@@ -26,7 +26,7 @@ namespace RakNet {
 
 /// \ingroup PACKETLOGGER_GROUP
 /// \brief Packetlogger that outputs to a file
-class RAK_DLL_EXPORT PacketFileLogger : public PacketLogger {
+class RAKNET_API PacketFileLogger : public PacketLogger {
 public:
     PacketFileLogger();
     virtual ~PacketFileLogger();

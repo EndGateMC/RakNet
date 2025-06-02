@@ -53,7 +53,7 @@ enum RNSPerSecondMetrics {
 /// \brief Network Statisics Usage
 ///
 /// Store Statistics information related to network usage
-struct RAK_DLL_EXPORT RakNetStatistics {
+struct RAKNET_API RakNetStatistics {
     /// For each type in RNSPerSecondMetrics, what is the value over the last 1 second?
     uint64_t valueOverLastSecond[RNS_PER_SECOND_METRICS_COUNT];
 
@@ -121,7 +121,7 @@ struct RAK_DLL_EXPORT RakNetStatistics {
 /// 1 medium
 /// 2 high
 /// 3 debugging congestion control
-void RAK_DLL_EXPORT StatisticsToString(RakNetStatistics* s, char* buffer, int verbosityLevel);
+void RAKNET_API StatisticsToString(RakNetStatistics* s, char* buffer, int verbosityLevel);
 
 } // namespace RakNet
 

@@ -33,7 +33,7 @@ namespace DataStructures {
 /// Very fast memory pool for allocating and deallocating structures that don't have constructors or destructors.
 /// Contains a list of pages, each of which has an array of the user structures
 template <class MemoryBlockType>
-class RAK_DLL_EXPORT MemoryPool {
+class RAKNET_API MemoryPool {
 public:
     struct Page;
     struct MemoryWithPage {

@@ -30,7 +30,7 @@
 /// As these data structures are stand-alone, you can use them outside of RakNet for your own projects if you wish.
 namespace DataStructures {
 template <class weight_type, class data_type, bool isMaxHeap>
-class RAK_DLL_EXPORT Heap {
+class RAKNET_API Heap {
 public:
     struct HeapNode {
         HeapNode() {}

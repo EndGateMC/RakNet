@@ -41,7 +41,7 @@ class CloudClientCallback;
 /// CloudClient can be received and subscribed to by other instances of CloudClient, without those clients being
 /// connected, even on different servers.
 /// \ingroup CLOUD_GROUP
-class RAK_DLL_EXPORT CloudClient : public PluginInterface2 {
+class RAKNET_API CloudClient : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(CloudClient)
@@ -178,7 +178,7 @@ protected:
 
 /// \ingroup CLOUD_GROUP
 /// Parses ID_CLOUD_GET_RESPONSE and ID_CLOUD_SUBSCRIPTION_NOTIFICATION in a convenient callback form
-class RAK_DLL_EXPORT CloudClientCallback {
+class RAKNET_API CloudClientCallback {
 public:
     CloudClientCallback() {}
     virtual ~CloudClientCallback() {}

@@ -40,7 +40,7 @@ typedef double SHValueType;
 
 /// \brief Input numerical values over time. Get sum, average, highest, lowest, standard deviation on recent or all-time
 /// values
-class RAK_DLL_EXPORT StatisticsHistory {
+class RAKNET_API StatisticsHistory {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(StatisticsHistory)
@@ -210,7 +210,7 @@ protected:
 /// \brief Input numerical values over time. Get sum, average, highest, lowest, standard deviation on recent or all-time
 /// values
 /// \ingroup PLUGINS_GROUP
-class RAK_DLL_EXPORT StatisticsHistoryPlugin : public PluginInterface2 {
+class RAKNET_API StatisticsHistoryPlugin : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(StatisticsHistoryPlugin)

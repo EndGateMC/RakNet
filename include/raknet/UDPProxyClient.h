@@ -161,7 +161,7 @@ struct UDPProxyClientResultHandler {
 /// \sa NatPunchthroughServer
 /// \sa NatPunchthroughClient
 /// \ingroup UDP_PROXY_GROUP
-class RAK_DLL_EXPORT UDPProxyClient : public PluginInterface2 {
+class RAKNET_API UDPProxyClient : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(UDPProxyClient)

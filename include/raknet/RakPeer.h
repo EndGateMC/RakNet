@@ -48,7 +48,7 @@ struct RemoteSystemIndex {
     unsigned           index;
     RemoteSystemIndex* next;
 };
-// int RAK_DLL_EXPORT SystemAddressAndIndexComp( const SystemAddress &key, const RemoteSystemIndex &data ); // GCC
+// int RAKNET_API SystemAddressAndIndexComp( const SystemAddress &key, const RemoteSystemIndex &data ); // GCC
 // requires RakPeer::RemoteSystemIndex or it won't compile
 
 ///\brief Main interface for network communications.
@@ -58,7 +58,7 @@ struct RemoteSystemIndex {
 ///
 /// See the individual functions for what the class can do.
 ///
-class RAK_DLL_EXPORT RakPeer : public RakPeerInterface, public RNS2EventHandler {
+class RAKNET_API RakPeer : public RakPeerInterface, public RNS2EventHandler {
 public:
     /// Constructor
     RakPeer();

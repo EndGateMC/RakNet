@@ -61,7 +61,7 @@ class FileListTransferCBInterface;
 class FileListProgress;
 class IncrementalReadInterface;
 
-class RAK_DLL_EXPORT DirectoryDeltaTransfer : public PluginInterface2 {
+class RAKNET_API DirectoryDeltaTransfer : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(DirectoryDeltaTransfer)

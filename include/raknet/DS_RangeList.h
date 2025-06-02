@@ -44,7 +44,7 @@ int RangeNodeComp(const range_type& a, const RangeNode<range_type>& b) {
 }
 
 template <class range_type>
-class RAK_DLL_EXPORT RangeList {
+class RAKNET_API RangeList {
 public:
     RangeList();
     ~RangeList();

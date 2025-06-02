@@ -38,7 +38,7 @@ namespace RakNet {
 #define RAK_THREAD_DECLARATION(functionName) void* functionName(void* arguments)
 #endif
 
-class RAK_DLL_EXPORT RakThread {
+class RAKNET_API RakThread {
 public:
     /// Create a thread, simplified to be cross platform without all the extra junk
     /// To then start that thread, call RakCreateThread(functionName, arguments);

@@ -37,7 +37,7 @@ class RakPeerInterface;
 /// This will write all incoming and outgoing messages to the console window, or to a file if you override it and give
 /// it this functionality.
 /// \ingroup PACKETLOGGER_GROUP
-class RAK_DLL_EXPORT PacketLogger : public PluginInterface2 {
+class RAKNET_API PacketLogger : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(PacketLogger)

@@ -25,7 +25,7 @@
 
 namespace RakNet {
 
-class RAK_DLL_EXPORT PacketizedTCP : public TCPInterface {
+class RAKNET_API PacketizedTCP : public TCPInterface {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(PacketizedTCP)

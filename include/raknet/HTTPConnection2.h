@@ -35,7 +35,7 @@ struct SystemAddress;
 /// \brief Use HTTPConnection2 to communicate with a web server.
 /// \details Start an instance of TCPInterface via the Start() command.
 /// This class will handle connecting to transmit a request
-class RAK_DLL_EXPORT HTTPConnection2 : public PluginInterface2 {
+class RAKNET_API HTTPConnection2 : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(HTTPConnection2)

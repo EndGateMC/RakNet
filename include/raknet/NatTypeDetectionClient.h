@@ -41,7 +41,7 @@ struct Packet;
 /// \sa NatPunchthroughClient
 /// \sa NatTypeDetectionServer
 /// \ingroup NAT_TYPE_DETECTION_GROUP
-class RAK_DLL_EXPORT NatTypeDetectionClient : public PluginInterface2, public RNS2EventHandler {
+class RAKNET_API NatTypeDetectionClient : public PluginInterface2, public RNS2EventHandler {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(NatTypeDetectionClient)

@@ -110,7 +110,7 @@ template <
     class _DataType,
     class _KeyType   = _DataType,
     class _IndexType = DefaultIndexType>
-class RAK_DLL_EXPORT Multilist {
+class RAKNET_API Multilist {
 public:
     Multilist();
     ~Multilist();

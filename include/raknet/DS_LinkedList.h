@@ -29,7 +29,7 @@
 namespace DataStructures {
 // Prototype to prevent error in CircularLinkedList class when a reference is made to a LinkedList class
 template <class LinkedListType>
-class RAK_DLL_EXPORT LinkedList;
+class RAKNET_API LinkedList;
 
 /**
  * \brief (Circular) Linked List ADT (Doubly Linked Pointer to Node Style) -
@@ -413,16 +413,11 @@ LinkedList<LinkedListType>::LinkedList(const LinkedList& original_copy) {
     }
 }
 
-#ifdef _MSC_VER
-#pragma warning(                                                                                                       \
-    disable : 4701                                                                                                     \
-) // warning C4701: local variable <variable name> may be used without having been initialized
-#endif
 template <class CircularLinkedListType>
 CircularLinkedList<CircularLinkedListType>::CircularLinkedList(const CircularLinkedList& original_copy) {
-    node* original_copy_pointer;
-    node* last;
-    node* save_position;
+    node* original_copy_pointer = nullptr;
+    node* last                  = nullptr;
+    node* save_position         = nullptr;
 
     if (original_copy.list_size == 0) {
         this->root      = 0;
@@ -494,16 +489,11 @@ CircularLinkedList<CircularLinkedListType>::CircularLinkedList(const CircularLin
     }
 }
 
-#ifdef _MSC_VER
-#pragma warning(                                                                                                       \
-    disable : 4701                                                                                                     \
-) // warning C4701: local variable <variable name> may be used without having been initialized
-#endif
 template <class CircularLinkedListType>
 bool CircularLinkedList<CircularLinkedListType>::operator=(const CircularLinkedList& original_copy) {
-    node* original_copy_pointer;
-    node* last;
-    node* save_position;
+    node* original_copy_pointer = nullptr;
+    node* last                  = nullptr;
+    node* save_position         = nullptr;
 
     if ((&original_copy) != this) {
 

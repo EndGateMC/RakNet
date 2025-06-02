@@ -44,7 +44,7 @@ class PacketLogger;
 #endif
 
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-struct RAK_DLL_EXPORT PunchthroughConfiguration {
+struct RAKNET_API PunchthroughConfiguration {
     /// internal: (15 ms * 2 tries + 30 wait) * 5 ports * 8 players = 2.4 seconds
     /// external: (50 ms * 8 sends + 200 wait) * 2 port * 8 players = 9.6 seconds
     /// Total: 8 seconds
@@ -97,20 +97,20 @@ struct RAK_DLL_EXPORT PunchthroughConfiguration {
 };
 
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-struct RAK_DLL_EXPORT NatPunchthroughDebugInterface {
+struct RAKNET_API NatPunchthroughDebugInterface {
     NatPunchthroughDebugInterface() {}
     virtual ~NatPunchthroughDebugInterface() {}
     virtual void OnClientMessage(const char* msg) = 0;
 };
 
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-struct RAK_DLL_EXPORT NatPunchthroughDebugInterface_Printf : public NatPunchthroughDebugInterface {
+struct RAKNET_API NatPunchthroughDebugInterface_Printf : public NatPunchthroughDebugInterface {
     virtual void OnClientMessage(const char* msg);
 };
 
 #if _RAKNET_SUPPORT_PacketLogger == 1
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-struct RAK_DLL_EXPORT NatPunchthroughDebugInterface_PacketLogger : public NatPunchthroughDebugInterface {
+struct RAKNET_API NatPunchthroughDebugInterface_PacketLogger : public NatPunchthroughDebugInterface {
     // Set to non-zero to write to the packetlogger!
     PacketLogger* pl;
 
@@ -127,7 +127,7 @@ struct RAK_DLL_EXPORT NatPunchthroughDebugInterface_PacketLogger : public NatPun
 /// \sa NatTypeDetectionClient
 /// See also http://www.jenkinssoftware.com/raknet/manual/natpunchthrough.html
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-class RAK_DLL_EXPORT NatPunchthroughClient : public PluginInterface2 {
+class RAKNET_API NatPunchthroughClient : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(NatPunchthroughClient)

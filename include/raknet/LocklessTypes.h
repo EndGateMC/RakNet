@@ -21,7 +21,7 @@
 
 namespace RakNet {
 
-class RAK_DLL_EXPORT LocklessUint32_t {
+class RAKNET_API LocklessUint32_t {
 public:
     LocklessUint32_t();
     explicit LocklessUint32_t(uint32_t initial);

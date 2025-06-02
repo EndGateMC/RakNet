@@ -33,7 +33,7 @@ namespace RakNet {
 class RakPeerInterface;
 
 /// \internal Has to be public so some of the shittier compilers can use it.
-int RAK_DLL_EXPORT MessageFilterStrComp(char* const& key, char* const& data);
+int RAKNET_API MessageFilterStrComp(char* const& key, char* const& data);
 
 /// \internal Has to be public so some of the shittier compilers can use it.
 struct FilterSet {
@@ -59,7 +59,7 @@ struct FilterSet {
 };
 
 /// \internal Has to be public so some of the shittier compilers can use it.
-int RAK_DLL_EXPORT FilterSetComp(const int& key, FilterSet* const& data);
+int RAKNET_API FilterSetComp(const int& key, FilterSet* const& data);
 
 /// \internal Has to be public so some of the shittier compilers can use it.
 struct FilteredSystem {
@@ -80,7 +80,7 @@ struct FilteredSystem {
 /// filter too long, or send the wrong message.<BR> Each system is a member of either zero or one filters.<BR> Add this
 /// plugin before any plugin you wish to filter (most likely just add this plugin before any other).
 /// \ingroup MESSAGEFILTER_GROUP
-class RAK_DLL_EXPORT MessageFilter : public PluginInterface2 {
+class RAKNET_API MessageFilter : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(MessageFilter)

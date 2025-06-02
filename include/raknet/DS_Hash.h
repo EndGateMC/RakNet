@@ -37,7 +37,7 @@ struct HashIndex {
 
 /// \brief Using a string as a identifier for a node, store an allocated pointer to that node
 template <class key_type, class data_type, unsigned int HASH_SIZE, unsigned long (*hashFunction)(const key_type&)>
-class RAK_DLL_EXPORT Hash {
+class RAKNET_API Hash {
 public:
     /// Default constructor
     Hash();

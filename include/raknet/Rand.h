@@ -21,30 +21,30 @@
 /// Initialise seed for Random Generator
 /// \note not threadSafe, use an instance of RakNetRandom if necessary per thread
 /// \param[in] seed The seed value for the random number generator.
-extern void RAK_DLL_EXPORT seedMT(unsigned int seed);
+extern void RAKNET_API seedMT(unsigned int seed);
 
 /// \internal
 /// \note not threadSafe, use an instance of RakNetRandom if necessary per thread
-extern unsigned int RAK_DLL_EXPORT reloadMT(void);
+extern unsigned int RAKNET_API reloadMT(void);
 
 /// Gets a random unsigned int
 /// \note not threadSafe, use an instance of RakNetRandom if necessary per thread
 /// \return an integer random value.
-extern unsigned int RAK_DLL_EXPORT randomMT(void);
+extern unsigned int RAKNET_API randomMT(void);
 
 /// Gets a random float
 /// \note not threadSafe, use an instance of RakNetRandom if necessary per thread
 /// \return 0 to 1.0f, inclusive
-extern float RAK_DLL_EXPORT frandomMT(void);
+extern float RAKNET_API frandomMT(void);
 
 /// Randomizes a buffer
 /// \note not threadSafe, use an instance of RakNetRandom if necessary per thread
-extern void RAK_DLL_EXPORT fillBufferMT(void* buffer, unsigned int bytes);
+extern void RAKNET_API fillBufferMT(void* buffer, unsigned int bytes);
 
 namespace RakNet {
 
 // Same thing as above functions, but not global
-class RAK_DLL_EXPORT RakNetRandom {
+class RAKNET_API RakNetRandom {
 public:
     RakNetRandom();
     ~RakNetRandom();

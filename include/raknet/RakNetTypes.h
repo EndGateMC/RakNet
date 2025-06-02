@@ -119,7 +119,7 @@ enum PublicKeyMode {
 };
 
 /// Passed to RakPeerInterface::Connect()
-struct RAK_DLL_EXPORT PublicKey {
+struct RAKNET_API PublicKey {
     /// How to interpret the public key, see above
     PublicKeyMode publicKeyMode;
 
@@ -134,7 +134,7 @@ struct RAK_DLL_EXPORT PublicKey {
 };
 
 /// Describes the local socket to use for RakPeer::Startup
-struct RAK_DLL_EXPORT SocketDescriptor {
+struct RAKNET_API SocketDescriptor {
     SocketDescriptor();
     SocketDescriptor(unsigned short _port, const char* _hostAddress);
 
@@ -176,7 +176,7 @@ extern bool NonNumericHostString(const char* host);
 /// SystemAddress over the network and expect it to identify a system, or use it to connect to that system, except in
 /// the case where that system is not behind a NAT (such as with a dedciated server) Use RakNetGUID for a unique
 /// per-instance of RakPeer to identify systems
-struct RAK_DLL_EXPORT SystemAddress {
+struct RAKNET_API SystemAddress {
     /// Constructors
     SystemAddress();
     SystemAddress(const char* str);
@@ -297,7 +297,7 @@ private:
 /// Uniquely identifies an instance of RakPeer. Use RakPeer::GetGuidFromSystemAddress() and
 /// RakPeer::GetSystemAddressFromGuid() to go between SystemAddress and RakNetGUID Use
 /// RakPeer::GetGuidFromSystemAddress(UNASSIGNED_SYSTEM_ADDRESS) to get your own GUID
-struct RAK_DLL_EXPORT RakNetGUID {
+struct RAKNET_API RakNetGUID {
     RakNetGUID();
     explicit RakNetGUID(uint64_t _g) {
         g           = _g;
@@ -351,7 +351,7 @@ const RakNetGUID    UNASSIGNED_RAKNET_GUID((uint64_t)-1);
 //};
 
 
-struct RAK_DLL_EXPORT AddressOrGUID {
+struct RAKNET_API AddressOrGUID {
     RakNetGUID    rakNetGuid;
     SystemAddress systemAddress;
 
@@ -446,7 +446,7 @@ const NetworkID UNASSIGNED_NETWORK_ID = (uint64_t)-1;
 
 const int PING_TIMES_ARRAY_SIZE = 5;
 
-struct RAK_DLL_EXPORT uint24_t {
+struct RAKNET_API uint24_t {
     uint32_t val;
 
     uint24_t() {}

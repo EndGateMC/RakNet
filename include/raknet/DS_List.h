@@ -33,7 +33,7 @@ namespace DataStructures {
 /// \brief Array based implementation of a list.
 /// \note ONLY USE THIS FOR SHALLOW COPIES.  I don't bother with operator= to improve performance.
 template <class list_type>
-class RAK_DLL_EXPORT List {
+class RAKNET_API List {
 public:
     /// Default constructor
     List();

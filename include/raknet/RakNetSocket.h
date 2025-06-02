@@ -23,7 +23,7 @@
 namespace RakNet
 {
 
-struct RAK_DLL_EXPORT RakNetSocket
+struct RAKNET_API RakNetSocket
 {
 public:
     RakNetSocket();

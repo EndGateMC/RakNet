@@ -21,7 +21,7 @@ class BitStream;
 
 namespace RakNet {
 
-class RAK_DLL_EXPORT TableSerializer {
+class RAKNET_API TableSerializer {
 public:
     static void SerializeTable(DataStructures::Table* in, RakNet::BitStream* out);
     static bool DeserializeTable(unsigned char* serializedTable, unsigned int dataLength, DataStructures::Table* out);

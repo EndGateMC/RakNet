@@ -37,7 +37,7 @@ namespace RakNet {
 /// 2. Call DeserializeVariable() for each variable, in the same order as was Serialized()<BR>
 /// 3. Call EndSerialize()<BR>
 /// \sa The ReplicaManager3 sample
-class RAK_DLL_EXPORT VariableDeltaSerializer {
+class RAKNET_API VariableDeltaSerializer {
 protected:
     struct RemoteSystemVariableHistory;
     struct ChangedVariablesList;

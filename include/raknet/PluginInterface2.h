@@ -85,7 +85,7 @@ enum PI2_FailedConnectionAttemptReason {
 /// -Updates over time, when RakPeer::Receive() is called
 ///
 /// \ingroup PLUGIN_INTERFACE_GROUP
-class RAK_DLL_EXPORT PluginInterface2 {
+class RAKNET_API PluginInterface2 {
 public:
     PluginInterface2();
     virtual ~PluginInterface2();

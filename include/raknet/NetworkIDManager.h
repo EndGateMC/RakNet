@@ -31,7 +31,7 @@ namespace RakNet {
 /// An instance of this class is required to use the ObjectID to pointer lookup system
 /// You should have one instance of this class per game instance.
 /// Call SetIsNetworkIDAuthority before using any functions of this class, or of NetworkIDObject
-class RAK_DLL_EXPORT NetworkIDManager {
+class RAKNET_API NetworkIDManager {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(NetworkIDManager)

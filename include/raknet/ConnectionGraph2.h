@@ -36,7 +36,7 @@ class RakPeerInterface;
 /// ID_REMOTE_NEW_INCOMING_CONNECTION<BR> All identifiers are followed by SystemAddress, then RakNetGUID Also stores the
 /// list for you, which you can access with GetConnectionListForRemoteSystem
 /// \ingroup CONNECTION_GRAPH_GROUP
-class RAK_DLL_EXPORT ConnectionGraph2 : public PluginInterface2 {
+class RAKNET_API ConnectionGraph2 : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(ConnectionGraph2)

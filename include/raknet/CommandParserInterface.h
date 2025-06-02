@@ -28,19 +28,19 @@ class TransportInterface;
 /// \internal
 /// Contains the information related to one command registered with RegisterCommand()
 /// Implemented so I can have an automatic help system via SendCommandList()
-struct RAK_DLL_EXPORT RegisteredCommand {
+struct RAKNET_API RegisteredCommand {
     const char*   command;
     const char*   commandHelp;
     unsigned char parameterCount;
 };
 
 /// List of commands registered with RegisterCommand()
-int RAK_DLL_EXPORT RegisteredCommandComp(const char* const& key, const RegisteredCommand& data);
+int RAKNET_API RegisteredCommandComp(const char* const& key, const RegisteredCommand& data);
 
 /// \brief The interface used by command parsers.
 /// \details CommandParserInterface provides a set of functions and interfaces that plug into the ConsoleServer class.
 /// Each CommandParserInterface works at the same time as other interfaces in the system.
-class RAK_DLL_EXPORT CommandParserInterface {
+class RAKNET_API CommandParserInterface {
 public:
     CommandParserInterface();
     virtual ~CommandParserInterface();

@@ -28,7 +28,7 @@ static const int MINIMUM_LIST_SIZE = 8;
 namespace DataStructures {
 /// \brief A single producer consumer implementation without critical sections.
 template <class SingleProducerConsumerType>
-class RAK_DLL_EXPORT SingleProducerConsumer {
+class RAKNET_API SingleProducerConsumer {
 public:
     // Constructor
     SingleProducerConsumer();

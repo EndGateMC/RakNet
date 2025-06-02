@@ -32,7 +32,7 @@ class BitStream;
 /// -Reference counting: Suitable to store in lists
 /// -Variadic assignment operator
 /// -Doesn't cause linker errors
-class RAK_DLL_EXPORT RakString {
+class RAKNET_API RakString {
 public:
     // Constructors
     RakString();
@@ -356,7 +356,7 @@ protected:
 
 } // namespace RakNet
 
-const RakNet::RakString RAK_DLL_EXPORT operator+(const RakNet::RakString& lhs, const RakNet::RakString& rhs);
+const RakNet::RakString RAKNET_API operator+(const RakNet::RakString& lhs, const RakNet::RakString& rhs);
 
 
 #endif

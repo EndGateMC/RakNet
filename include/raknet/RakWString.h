@@ -23,7 +23,7 @@
 
 namespace RakNet {
 /// \brief String class for Unicode
-class RAK_DLL_EXPORT RakWString {
+class RAKNET_API RakWString {
 public:
     // Constructors
     RakWString();
@@ -120,7 +120,7 @@ protected:
 
 } // namespace RakNet
 
-const RakNet::RakWString RAK_DLL_EXPORT operator+(const RakNet::RakWString& lhs, const RakNet::RakWString& rhs);
+const RakNet::RakWString RAKNET_API operator+(const RakNet::RakWString& lhs, const RakNet::RakWString& rhs);
 
 
 #endif

@@ -16,7 +16,7 @@
 
 namespace RakNet {
 
-class RAK_DLL_EXPORT IncrementalReadInterface {
+class RAKNET_API IncrementalReadInterface {
 public:
     IncrementalReadInterface() {}
     virtual ~IncrementalReadInterface() {}

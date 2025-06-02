@@ -77,7 +77,7 @@ struct SplitPacketChannel //<SplitPacketChannel>
     InternalPacket* firstPacket;
 #endif
 };
-int RAK_DLL_EXPORT SplitPacketChannelComp(SplitPacketIdType const& key, SplitPacketChannel* const& data);
+int RAKNET_API SplitPacketChannelComp(SplitPacketIdType const& key, SplitPacketChannel* const& data);
 
 // Helper class
 struct BPSTracker {

@@ -85,7 +85,7 @@ enum RackspaceOperationType {
 };
 
 /// \brief Callback interface to receive the results of operations
-class RAK_DLL_EXPORT Rackspace2EventCallback {
+class RAKNET_API Rackspace2EventCallback {
 public:
     Rackspace2EventCallback() {}
     virtual ~Rackspace2EventCallback() {}
@@ -120,7 +120,7 @@ public:
 };
 
 /// \brief Callback interface to receive the results of operations, with a default result
-class RAK_DLL_EXPORT RackspaceEventCallback_Default : public Rackspace2EventCallback {
+class RAKNET_API RackspaceEventCallback_Default : public Rackspace2EventCallback {
 public:
     virtual void
     ExecuteDefault(const char* callbackName, RackspaceEventType eventType, const char* htmlAdditionalInfo) {
@@ -218,7 +218,7 @@ public:
 /// \pre Compile RakNet with OPEN_SSL_CLIENT_SUPPORT set to 1
 /// \pre Packets returned from TCPInterface::OnReceive() must be passed to Rackspace::OnReceive()
 /// \pre Packets returned from TCPInterface::HasLostConnection() must be passed to Rackspace::OnClosedConnection()
-class RAK_DLL_EXPORT Rackspace {
+class RAKNET_API Rackspace {
 public:
     Rackspace();
     ~Rackspace();

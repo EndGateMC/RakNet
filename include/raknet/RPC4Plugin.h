@@ -53,7 +53,7 @@ enum RPCErrorCodes {
 };
 
 /// \brief Instantiate this class globally if you want to register a function with RPC4 at the global space
-class RAK_DLL_EXPORT RPC4GlobalRegistration {
+class RAKNET_API RPC4GlobalRegistration {
 public:
     /// \brief Queue a call to RPC4::RegisterFunction() globally. Actual call occurs once RPC4 is attached to an
     /// instance of RakPeer or TCPInterface.
@@ -84,7 +84,7 @@ public:
 /// You do not have the automatic serialization or other features of RPC3, and C++ member calls are not supported.
 /// \note You cannot use RPC4 at the same time as RPC3Plugin
 /// \ingroup RPC_PLUGIN_GROUP
-class RAK_DLL_EXPORT RPC4 : public PluginInterface2 {
+class RAKNET_API RPC4 : public PluginInterface2 {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(RPC4)

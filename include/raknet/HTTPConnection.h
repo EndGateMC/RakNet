@@ -39,7 +39,7 @@ struct SystemAddress;
 ///
 /// Note that only one Post() can be handled at a time.
 /// \deprecated, use HTTPConnection2
-class RAK_DLL_EXPORT HTTPConnection {
+class RAKNET_API HTTPConnection {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(HTTPConnection)

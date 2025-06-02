@@ -1,11 +1,17 @@
 add_rules("mode.debug", "mode.release")
 
+option("libtype")
+    set_default("static")
+    set_values("static", "shared")
+    set_showmenu(true)
+option_end()
+
 if is_os("windows") and not has_config("vs_runtime") then
     set_runtimes("MD")
 end
 
 target("RakNet")
-    set_kind("static")
+    set_kind("$(libtype)")
     set_languages("c++20")
     set_exceptions("none")
     add_includedirs("include/raknet")
@@ -24,6 +30,9 @@ target("RakNet")
             "/W4",
             { force = true }
         )
+        if has_config("libtype", "shared") then
+            add_defines("RAKNET_EXPORT")
+        end
     else
         add_cxflags(
             "-Wall",
@@ -39,4 +48,12 @@ target("RakNet")
             "-stdlib=libc++",
             { force = true }
         )
+        if has_config("libtype", "shared") then
+            add_defines("RAKNET_EXPORT")
+            add_cxflags(
+                "-fvisibility=hidden",
+                "-fvisibility-inlines-hidden",
+                { force = true }
+            )
+        end
     end

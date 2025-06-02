@@ -41,7 +41,7 @@ class HuffmanEncodingTree;
 ///
 /// Only works with ASCII strings.  The default compression is for English.
 /// You can call GenerateTreeFromStrings to compress and decompress other languages efficiently as well.
-class RAK_DLL_EXPORT StringCompressor {
+class RAKNET_API StringCompressor {
 public:
     // Destructor
     ~StringCompressor();

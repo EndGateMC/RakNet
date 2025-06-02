@@ -26,7 +26,7 @@
 /// As these data structures are stand-alone, you can use them outside of RakNet for your own projects if you wish.
 namespace DataStructures {
 template <class TreeType>
-class RAK_DLL_EXPORT Tree {
+class RAKNET_API Tree {
 public:
     Tree();
     Tree(TreeType& inputData);

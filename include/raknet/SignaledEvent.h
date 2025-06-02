@@ -28,7 +28,7 @@
 
 namespace RakNet {
 
-class RAK_DLL_EXPORT SignaledEvent {
+class RAKNET_API SignaledEvent {
 public:
     SignaledEvent();
     ~SignaledEvent();

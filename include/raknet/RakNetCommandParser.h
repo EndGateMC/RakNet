@@ -25,7 +25,7 @@ namespace RakNet {
 class RakPeerInterface;
 
 /// \brief This allows a console client to call most of the functions in RakPeer
-class RAK_DLL_EXPORT RakNetCommandParser : public CommandParserInterface {
+class RAKNET_API RakNetCommandParser : public CommandParserInterface {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(RakNetCommandParser)

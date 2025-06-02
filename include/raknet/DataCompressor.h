@@ -25,7 +25,7 @@ namespace RakNet {
 
 /// \brief Does compression on a block of data.  Not very good compression, but it's small and fast so is something you
 /// can compute at runtime.
-class RAK_DLL_EXPORT DataCompressor {
+class RAKNET_API DataCompressor {
 public:
     // GetInstance() and DestroyInstance(instance*)
     STATIC_FACTORY_DECLARATIONS(DataCompressor)

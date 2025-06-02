@@ -45,7 +45,7 @@ enum UDPForwarderResult {
 
 /// \brief Forwards UDP datagrams. Independent of RakNet's protocol.
 /// \ingroup NAT_PUNCHTHROUGH_GROUP
-class RAK_DLL_EXPORT UDPForwarder {
+class RAKNET_API UDPForwarder {
 public:
     UDPForwarder();
     virtual ~UDPForwarder();
