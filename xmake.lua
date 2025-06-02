@@ -12,7 +12,7 @@ end
 
 target("RakNet")
     set_kind("$(libtype)")
-    set_languages("c++20")
+    set_languages("c++23")
     set_exceptions("none")
     add_includedirs("include/raknet")
     add_files("src/**.cpp")
@@ -35,8 +35,7 @@ target("RakNet")
         add_cxflags(
             "/EHa",
             "/utf-8",
-            "/W4",
-            { force = true }
+            "/W4"
         )
         if is_mode("release") then
             add_cxflags(
@@ -56,12 +55,10 @@ target("RakNet")
             "-Wno-pointer-bool-conversion",
             "-Wno-unused-but-set-variable",
             "-Wno-unused-private-field",
-            "-stdlib=libc++",
-            { force = true }
+            "-stdlib=libc++"
         )
         add_ldflags(
-            "-stdlib=libc++",
-            { force = true }
+            "-stdlib=libc++"
         )
         if is_mode("release") then
             add_cxflags(
@@ -72,8 +69,7 @@ target("RakNet")
             add_defines("_RAKNET_EXPORT")
             add_cxflags(
                 "-fvisibility=hidden",
-                "-fvisibility-inlines-hidden",
-                { force = true }
+                "-fvisibility-inlines-hidden"
             )
         end
     end

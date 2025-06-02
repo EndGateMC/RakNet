@@ -95,7 +95,7 @@ bool TCPInterface::CreateListenSocket(
     unsigned short port,
     unsigned short maxIncomingConnections,
     unsigned short socketFamily,
-    const char*    bindAddress
+    const char* /*bindAddress*/
 ) {
     (void)maxIncomingConnections;
     (void)socketFamily;
@@ -669,7 +669,7 @@ __TCPSOCKET__ TCPInterface::SocketConnect(
     const char*    host,
     unsigned short remotePort,
     unsigned short socketFamily,
-    const char*    bindAddress
+    const char* /*bindAddress*/
 ) {
 #ifdef __native_client__
     return 0;
@@ -731,11 +731,11 @@ __TCPSOCKET__ TCPInterface::SocketConnect(
     char portStr[32];
     Itoa(remotePort, portStr, 10);
     getaddrinfo(host, portStr, &hints, &res);
-    sockfd = socket__(res->ai_family, res->ai_socktype, res->ai_protocol);
+    sockfd = (int)socket__(res->ai_family, res->ai_socktype, res->ai_protocol);
     blockingSocketListMutex.Lock();
     blockingSocketList.Insert(sockfd, _FILE_AND_LINE_);
     blockingSocketListMutex.Unlock();
-    connectResult = connect__(sockfd, res->ai_addr, res->ai_addrlen);
+    connectResult = connect__(sockfd, res->ai_addr, (int)res->ai_addrlen);
     freeaddrinfo(res); // free the linked-list
 
 #endif // #if RAKNET_SUPPORT_IPV6!=1
