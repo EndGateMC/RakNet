@@ -1,13 +1,8 @@
 on:
-  push:
-    paths:
-      - .github/workflows/build.yml
-      - src/**
-      - include/**
-      - xmake.lua
-  pull_request:
-  workflow_dispatch:
-
+  release:
+    types:
+      - published
+  
 jobs:
   build-windows:
     name: Build on Windows (MSVC)
@@ -35,6 +30,12 @@ jobs:
 
     - name: Build RakNet Shared (Release)
       run: xmake config --mode=release --libtype=shared && xmake --all
+
+    - name: Upload to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          bin/RakNet.dll
 
   build-linux:
     name: Build on Linux (Clang)
@@ -64,4 +65,12 @@ jobs:
       run: xmake config --mode=release --toolchain=clang && xmake --all
 
     - name: Build RakNet Shared (Release)
-      run: xmake config --mode=release --libtype=shared --toolchain=clang && xmake --all
+      run: |
+        xmake config --mode=release --libtype=shared --toolchain=clang && xmake --all
+        find bin -name "libRakNet.so" -exec sh -c 'mv "$1" "RakNet.so"' _ {} \;
+
+    - name: Upload to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          bin/RakNet.so
