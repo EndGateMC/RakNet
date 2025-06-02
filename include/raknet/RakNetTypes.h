@@ -23,7 +23,6 @@
 #include "RakNetTime.h"
 #include "SocketIncludes.h"
 #include "WindowsIncludes.h"
-#include "XBox360Includes.h"
 
 namespace RakNet {
 /// Forward declarations
