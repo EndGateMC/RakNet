@@ -32,6 +32,7 @@ target("RakNet")
         )
         if has_config("libtype", "shared") then
             add_defines("RAKNET_EXPORT")
+            add_links("ws2_32")
         end
     else
         add_cxflags(
