@@ -76,6 +76,7 @@ jobs:
           bin/
 
   upload-to-release:
+    name: Publish Release
     needs:
       - build-windows
       - build-linux
@@ -95,8 +96,12 @@ jobs:
           name: RakNet-linux-x86_64-${{ github.sha }}
           path: artifact
 
+      - run: |
+          mv libRakNet.so RakNet.so
+        working-directory: artifact
+
       - uses: softprops/action-gh-release@v1
         with:
           files: |
-            RakNet.dll
-            RakNet.so
+            artifact/RakNet.dll
+            artifact/RakNet.so
