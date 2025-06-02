@@ -794,9 +794,7 @@ bool RakPeer::IsInSecurityExceptionList(const char* ip) {
 // Parameters:
 // numberAllowed - Maximum number of incoming connections allowed.
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-void RakPeer::SetMaximumIncomingConnections(unsigned short numberAllowed) {
-    maximumIncomingConnections = numberAllowed;
-}
+void RakPeer::SetMaximumIncomingConnections(uint32_t numberAllowed) { maximumIncomingConnections = numberAllowed; }
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Description:

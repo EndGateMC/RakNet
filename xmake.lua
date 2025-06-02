@@ -16,6 +16,9 @@ target("RakNet")
     set_exceptions("none")
     add_includedirs("include/raknet")
     add_files("src/**.cpp")
+    add_defines(
+        "RAKNET_SUPPORT_IPV6"
+    )
     if is_mode("debug") then
         set_symbols("debug")
     else

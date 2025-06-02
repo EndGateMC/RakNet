@@ -141,6 +141,8 @@ void RNS2_Berkley::GetSystemAddressIPV4And6(RNS2Socket rns2Socket, SystemAddress
 #endif
 }
 
+extern void PrepareAddrInfoHints2(addrinfo* hints);
+
 #ifdef _MSC_VER
 #pragma warning(disable : 4702) // warning C4702: unreachable code
 #endif
@@ -270,7 +272,7 @@ RNS2_Berkley::BindSharedIPV4And6(RNS2_BerkleyBindParameters* bindParameters, con
     for (aip = servinfo; aip != NULL; aip = aip->ai_next) {
         // Open socket. The address type depends on what
         // getaddrinfo() gave us.
-        rns2Socket = socket__(aip->ai_family, aip->ai_socktype, aip->ai_protocol);
+        rns2Socket = (uint32_t)socket__(aip->ai_family, aip->ai_socktype, aip->ai_protocol);
 
         if (rns2Socket == -1) return BR_FAILED_TO_BIND_SOCKET;
 

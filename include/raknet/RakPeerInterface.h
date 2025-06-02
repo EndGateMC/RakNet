@@ -113,7 +113,7 @@ public:
     /// it will be reduced to the maximum number of peers allowed.
     /// Defaults to 0, meaning by default, nobody can connect to you
     /// \param[in] numberAllowed Maximum number of incoming connections allowed.
-    virtual void SetMaximumIncomingConnections(unsigned short numberAllowed) = 0;
+    virtual void SetMaximumIncomingConnections(uint32_t numberAllowed) = 0;
 
     /// Returns the value passed to SetMaximumIncomingConnections()
     /// \return the maximum number of incoming connections, which is always <= maxConnections

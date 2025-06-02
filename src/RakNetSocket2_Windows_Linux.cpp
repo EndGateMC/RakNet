@@ -27,9 +27,9 @@ void PrepareAddrInfoHints2(addrinfo* hints) {
 }
 
 void GetMyIP_Windows_Linux_IPV4And6(SystemAddress addresses[MAXIMUM_NUMBER_OF_INTERNAL_IDS]) {
-    int  idx = 0;
-    char ac[80];
-    int  err = gethostname(ac, sizeof(ac));
+    int                  idx = 0;
+    char                 ac[80];
+    [[maybe_unused]] int err = gethostname(ac, sizeof(ac));
     RakAssert(err != -1);
 
     struct addrinfo  hints;
