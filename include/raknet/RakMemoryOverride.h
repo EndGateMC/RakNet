@@ -18,8 +18,8 @@
 
 #include "Export.h"
 #include "RakNetDefines.h"
+#include <cstddef>
 #include <new>
-
 
 #include "RakAlloca.h"
 

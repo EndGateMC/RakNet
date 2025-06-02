@@ -10,6 +10,7 @@
 
 #ifndef _GCC_WIN_STRINGS
 #define _GCC_WIN_STRINGS
+#include <cstddef>
 
 #if defined(__native_client__)
 #ifndef _stricmp

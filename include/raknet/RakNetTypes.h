@@ -12,10 +12,10 @@
 /// \brief Types used by RakNet, most of which involve user code.
 ///
 
-
 #ifndef __NETWORK_TYPES_H
 #define __NETWORK_TYPES_H
 
+#include <cstddef>
 
 #include "Export.h"
 #include "NativeTypes.h"
@@ -24,7 +24,6 @@
 #include "SocketIncludes.h"
 #include "WindowsIncludes.h"
 #include "XBox360Includes.h"
-
 
 namespace RakNet {
 /// Forward declarations

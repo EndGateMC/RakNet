@@ -10,35 +10,33 @@ target("RakNet")
     set_exceptions("none")
     add_includedirs("include/raknet")
     add_files("src/**.cpp")
-    add_defines(
-        "NOMINMAX",
-        "UNICODE"
-    )
 
     if is_os("windows") then
+        add_defines(
+            "NOMINMAX",
+            "UNICODE",
+            "_CRT_SECURE_NO_WARNINGS",
+            "_WINSOCK_DEPRECATED_NO_WARNINGS"
+        )
         add_cxflags(
             "/EHa",
             "/utf-8",
             "/W4",
             { force = true }
         )
-        add_defines(
-            "_CRT_SECURE_NO_WARNINGS",
-            "_WINSOCK_DEPRECATED_NO_WARNINGS"
-        )
-    elseif is_os("linux") then
-        add_cxxflags("-include cstddef")
+    else
         add_cxflags(
             "-Wall",
             "-fexceptions",
-            "-stdlib=libc++",
+            "-pedantic",
             "-Wno-pointer-bool-conversion",
             "-Wno-unused-but-set-variable",
             "-Wno-unused-private-field",
+            "-stdlib=libc++",
             { force = true }
         )
         add_ldflags(
             "-stdlib=libc++",
-            {force = true}
+            { force = true }
         )
     end

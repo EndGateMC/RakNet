@@ -28,6 +28,7 @@
 #include "RakNetTypes.h"
 #include "RakString.h"
 #include "RakWString.h"
+#include <cstddef>
 #include <float.h>
 #include <math.h>
 

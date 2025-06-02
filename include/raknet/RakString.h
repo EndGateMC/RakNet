@@ -19,8 +19,6 @@
 
 
 #ifdef _WIN32
-
-
 #include "WindowsIncludes.h"
 #endif
 
