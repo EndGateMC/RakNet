@@ -13,6 +13,10 @@
 
 #if _RAKNET_SUPPORT_UDPForwarder == 1
 
+#if (defined(__GNUC__) || defined(__GCCXML__)) && !defined(__WIN32__)
+#include <netdb.h>
+#endif
+
 #include "DS_OrderedList.h"
 #include "GetTime.h"
 #include "LinuxStrings.h"
