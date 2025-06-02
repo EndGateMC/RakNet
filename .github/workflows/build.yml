@@ -26,13 +26,13 @@ jobs:
       run: xmake config --mode=debug && xmake --all
 
     - name: Build RakNet Shared (Debug)
-      run: xmake config --mode=debug && xmake f --libtype=shared && xmake --all
+      run: xmake config --mode=debug --libtype=shared && xmake --all
       
     - name: Build RakNet Static (Release)
       run: xmake config --mode=release && xmake --all
 
     - name: Build RakNet Shared (Release)
-      run: xmake config --mode=release && xmake f --libtype=shared && xmake --all
+      run: xmake config --mode=release --libtype=shared && xmake --all
 
   build-linux:
     name: Build on Linux (Clang)
@@ -56,10 +56,10 @@ jobs:
       run: xmake config --mode=debug --toolchain=clang && xmake --all
 
     - name: Build RakNet Shared (Debug)
-      run: xmake config --mode=debug --toolchain=clang && xmake f --libtype=shared && xmake --all
+      run: xmake config --mode=debug --libtype=shared --toolchain=clang && xmake --all
       
     - name: Build RakNet Static (Release)
       run: xmake config --mode=release --toolchain=clang && xmake --all
 
     - name: Build RakNet Shared (Release)
-      run: xmake config --mode=release --toolchain=clang && xmake f --libtype=shared && xmake --all
+      run: xmake config --mode=release --libtype=shared --toolchain=clang && xmake --all

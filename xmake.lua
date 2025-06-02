@@ -64,5 +64,6 @@ target("RakNet")
             local output_dir = path.join(os.projectdir(), "bin")
             os.mkdir(output_dir)
             os.cp(target:targetfile(), path.join(output_dir, path.filename(target:targetfile())))
+            cprint("${bright green}[Shared Library]: ${reset}".. path.filename(target:targetfile()) .. " already generated to " .. output_dir)
         end)
     end
