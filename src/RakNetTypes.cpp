@@ -37,7 +37,11 @@
 #include "SocketLayer.h"
 #include "SuperFastHash.h"
 #include <stdlib.h>
-#include <string.h> // strncasecmp
+#include <string.h> // strncasecmp'
+
+#if (defined(__GNUC__) || defined(__GCCXML__)) && !defined(__WIN32__)
+#include <netdb.h>
+#endif
 
 using namespace RakNet;
 
