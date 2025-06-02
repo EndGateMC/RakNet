@@ -11,6 +11,7 @@
 #include "EmptyHeader.h"
 
 #if (defined(__GNUC__) || defined(__GCCXML__)) && !defined(__WIN32__)
+#include "LinuxStrings.h"
 #include <netdb.h>
 #endif
 
