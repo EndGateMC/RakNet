@@ -10,6 +10,10 @@
 
 #include "EmptyHeader.h"
 
+#if (defined(__GNUC__) || defined(__GCCXML__)) && !defined(__WIN32__)
+#include <netdb.h>
+#endif
+
 #ifdef RAKNET_SOCKET_2_INLINE_FUNCTIONS
 
 #ifndef RAKNETSOCKET2_BERKLEY_CPP
