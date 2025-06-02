@@ -11,6 +11,7 @@ if is_os("windows") and not has_config("vs_runtime") then
 end
 
 target("RakNet")
+    set_basename("RakNet")
     set_kind("$(libtype)")
     set_languages("c++20")
     set_exceptions("none")
