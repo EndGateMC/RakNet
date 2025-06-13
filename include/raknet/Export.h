@@ -22,7 +22,7 @@
 #endif
 #else
 #ifdef RAKNET_EXPORT
-#define RAKNET_API __attribute__((visibility("default")))
+#define RAKNET_API __attribute__((visibility("default"), noinline))
 #else
 #define RAKNET_API
 #endif
